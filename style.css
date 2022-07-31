@@ -46,7 +46,9 @@ main img {
 .form-group {
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
+  padding: 20px 0
 }
 
 .form-item {
@@ -114,7 +116,6 @@ header nav ul li a:hover {
 
 form {
   border: 2px solid #ff385c;
-  margin: 0 10px;
   padding: 10px;
 }
 
@@ -122,8 +123,7 @@ form label {
   font-weight: bold;
 }
 
-form select,
-form input {
+form select, form input {
   margin-bottom: 20px;
   width: 180px;
 }
@@ -132,10 +132,19 @@ form button {
   background-color: #ff385c;
   border: none;
   color: #fff;
-  font-size: 34px;
-  padding: 12px;
-  margin-top: 20px 10px 10px 10px;
+  font-size: 24px;
+  padding: 15px;
   width: 100%;
+}
+
+.date::placeholder {
+  color: black;
+}
+
+.space-between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 /* -------  Footer ------- */
 
@@ -169,7 +178,7 @@ footer p {
     margin-top: 30px;
   }
 
-  .desktop-form-group {
+  .form-container {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -178,21 +187,23 @@ footer p {
     padding: 0 8px;
   }
 
-  .form-group {
+  .space-between {
     /* Group style for the label and input */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     /* Style for the label and input as one item */
     flex: 1;
     align-self: center;
   }
 
-form button {
-  margin: 10px 0;
-}
+  .button-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
 
-.about desktop {
+.desktop-about-group {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -201,7 +212,7 @@ form button {
   align-content: space-evenly;
 }
 
-.about {
+.about-item {
   flex: 1;
   margin: 10px;
 }
@@ -210,7 +221,6 @@ form button {
 .double-item {
   flex: 2;
 }
-
 
 .desktop-ideas-group {
   display: flex;
